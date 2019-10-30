@@ -360,12 +360,13 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     // MUSIC 
-
-
     let musicBtn = document.querySelector('.sound-settings');
-    musicBtn.addEventListener('mousedown', () => {
+    let music = document.querySelector('.player');
+    music.play()
+
+    musicBtn.addEventListener('click', () => {
         let soundIcon = document.querySelector('.fa-volume-up');
-        let music = document.querySelector('.player');
+        music = document.querySelector('.player');
         if (musicBtn.classList.contains('muted')) {
             music.play();
             musicBtn.classList.remove('muted');
