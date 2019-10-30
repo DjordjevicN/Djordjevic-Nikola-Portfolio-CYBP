@@ -26,7 +26,7 @@ body{
     font-family: 'Teko', sans-serif;
     background-color: var(--bg-color);
     color:var(--y-non-selected-text);
-
+overflow: hidden;
     
 }
 body::after{
@@ -34,7 +34,7 @@ body::after{
     position: absolute;
     height: 100%;
     width: 100%;
-    z-index: 5000;
+    z-index: 15000;
     top: 0;
     background-size: 4px;
     pointer-events: none;
@@ -44,7 +44,7 @@ body::after{
         rgba(0,0,0,0.4) 1px, 
         transparent 1px,
         transparent 2px);
-        opacity: .2;
+        opacity: .4;
 }
 img{
     width: 300px;
@@ -69,38 +69,7 @@ img{
     z-index: -19;
 }
 
-/* SETTINGS  */
-.contact-menu{
-    cursor: pointer;
-    width: 40px;
 
-}
-.settings-green{
-    color:var(--g-selected-text);
-}
-
-.settings-blue{
-    color:var(--b-selected-text);
-}
-.settings-yellow{
-    color:var(--y-selected-text);
-}
-.settings-pink{
-    color:var(--w-selected-text);
-}
-
-
-
-.interface-settings{
-    position: fixed;
-    top: 25%;
-    left: 20px;
-}
-
-.interface-settings i{
-    font-size: 40px;
-    padding-top:30px ;
-}
 /* NAVIGATION  */
 
 .nav-bar ul{
@@ -113,7 +82,7 @@ img{
     margin-top: 15px;
     font-size: 40px;
     color: var(--y-non-selected-text);
-    border-bottom: 2px solid var(--y-non-selected-text);
+    /* border-bottom: 2px solid var(--y-non-selected-text); */
     cursor: pointer;
 }
 .nav-bar li:hover{
@@ -297,6 +266,7 @@ img{
 .work-project-card img{
     width: 300px;
 }
+
 .button-project {
     border: 1px solid var(--b-non-selected-text);
     display: inline-block;
@@ -330,15 +300,152 @@ img{
 
 
 
+/* FOOTER  */
+.footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0; 
+
+}
+
+/* CONTACT BAR */
+.phone-contact{
+    position: relative;;
+    width: 150px;
+    bottom: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
 
 
+.settings-green{
+    color:var(--g-selected-text);
+}
+
+.settings-blue{
+    color:var(--b-selected-text);
+}
+.settings-yellow{
+    color:var(--y-selected-text);
+}
+.settings-pink{
+    color:var(--w-selected-text);
+}
+.interface-settings{
+    position: fixed;
+    bottom: 50px;
+    left: -350px;
+}
+.interface-settings ul{
+    display: flex;
+}
+.interface-settings li{
+    padding: 20px;
+}
+.interface-settings i{
+    font-size: 40px;
+    padding-top:30px ;
+}
+.sound-settings{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.sound-settings i {
+    font-size: 20px;
+}
 
 
+/* LOADER  */
 
 
+.preloader-wrapper{
+    background-color: #272b23;
+    width: 100%;
+    height: 100vh;
+}
 
-
-
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #9370DB;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #BA55D3;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #FF00FF;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/* MUSIC */
+embed{
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    background-color: #9370DB;
+    width: 300px;
+    height: 20px;
+}
 
 
 

@@ -6,9 +6,9 @@ let homeContent = `<div class="content-wrapper">
 <section class="home ">
     <div class="greetings content-card">
         <div class="greetings-title">
-            <h1> HI </h1>
-            <h1> My Name is <span>Nikola</span> </h1>
-            <h1> I am a Front End Developer </h1>
+            <h1 class="t1"> HI </h1>
+            <h1 class="t2"> My Name is <span>Nikola</span> </h1>
+            <h1 class="t3"> I am a Front End Developer </h1>
         </div>
 
     </div>
@@ -66,7 +66,7 @@ let workContent = `
         <div class="work-content work-content-card">
             <div class="work-gallery">
 
-                <div class="work-project-card">
+                <div class="work-project-card card-6">
                     <h1 class="work-project-card-title " data-depth=".1">
                         Name Of The Project
                     </h1>
@@ -74,35 +74,35 @@ let workContent = `
                     <p class="button-project btn-github ">Go to GITHUB</p>
                 </div>
 
-                <div class="work-project-card">
+                <div class="work-project-card card-5">
                     <h1 class="work-project-card-title " data-depth=".1">
                         Name Of The Project
                     </h1>
                     <a href=""><img src="./moviesearch.jpg"> </a>
                     <p class="button-project btn-github ">Go to GITHUB</p>
                 </div>
-                <div class="work-project-card">
+                <div class="work-project-card card-4">
                     <h1 class="work-project-card-title " data-depth=".1">
                         Name Of The Project
                     </h1>
                     <a href=""><img src="./moviesearch.jpg"> </a>
                     <p class="button-project btn-github ">Go to GITHUB</p>
                 </div>
-                <div class="work-project-card">
+                <div class="work-project-card card-3">
                     <h1 class="work-project-card-title " data-depth=".1">
                         Name Of The Project
                     </h1>
                     <a href=""><img src="./moviesearch.jpg"> </a>
                     <p class="button-project btn-github ">Go to GITHUB</p>
                 </div>
-                <div class="work-project-card">
+                <div class="work-project-card card-2">
                     <h1 class="work-project-card-title " data-depth=".1">
                         Name Of The Project
                     </h1>
                     <a href=""><img src="./moviesearch.jpg"> </a>
                     <p class="button-project btn-github ">Go to GITHUB</p>
                 </div>
-                <div class="work-project-card">
+                <div class="work-project-card card-1">
                     <h1 class="work-project-card-title " data-depth=".1">
                         Name Of The Project
                     </h1>
@@ -136,14 +136,6 @@ let skillsContent = `<div class="skills-section">
 
 
 
-// var audio = new Audio('./bleep.mp4');
-
-// audio.oncanplaythrough = function () {
-//     audio.play();
-// }
-
-
-
 
 const home = document.querySelector('#home');
 const about = document.querySelector('#about');
@@ -151,31 +143,243 @@ const work = document.querySelector('#work');
 const skills = document.querySelector('#skills');
 
 let contentBox = document.querySelector('.content-wrapper');
+let phoneContact = document.querySelector('.phone-contact');
+let enter = document.querySelector('.preloader-wrapper');
+
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
+    let enterSequence = new TimelineMax({})
+    let openSkills = new TimelineMax({})
+    let openHome = new TimelineMax({})
+    let openAbout = new TimelineMax({})
+    let openWork = new TimelineMax({})
+    let openContact = new TimelineMax({ paused: true, reversed: true })
+
+    contentBox.innerHTML = '';
+    contentBox.innerHTML = homeContent;
+
+
+    enterSequence
+        .from('.phone-contact', 1, {
+            x: -300
+        })
+        .from('#home', .1, {
+            opacity: 0
+        })
+        .from('#home', .3, {
+            y: 400,
+            x: 300,
+            fontSize: 250
+        })
+        .from('#about', .1, {
+            opacity: 0
+        })
+        .from('#about', .3, {
+            y: 400,
+            x: 100,
+            fontSize: 250
+        })
+        .from('#work', .1, {
+            opacity: 0
+        })
+        .from('#work', .3, {
+            y: 400,
+            x: -100,
+            fontSize: 250
+        })
+        .from('#skills', .1, {
+            opacity: 0
+        })
+        .from('#skills', .3, {
+            y: 400,
+            x: -300,
+            fontSize: 250
+        })
+        .from('.interface-settings li', 1, {
+            x: 550
+        })
+        .from('.home', 1, {
+            opacity: 0,
+            x: -300
+        })
+        .from('.t1', .1, {
+            opacity: 0,
+
+        })
+        .from('.t2', .1, {
+            opacity: 0,
+
+        })
+        .from('.t3', .1, {
+            opacity: 0,
+
+        })
+
+
+
+
 
 
     home.addEventListener('click', () => {
         contentBox.innerHTML = '';
         contentBox.innerHTML = homeContent;
+
+        openHome
+            .from('.home', 1, {
+                opacity: 0,
+                x: -300
+            })
+            .from('.t1', .1, {
+                opacity: 0,
+
+            })
+            .from('.t2', .1, {
+                opacity: 0,
+
+            })
+            .from('.t3', .1, {
+                opacity: 0,
+
+            })
     })
 
     about.addEventListener('click', () => {
         contentBox.innerHTML = '';
         contentBox.innerHTML = aboutContent;
+
+        openAbout
+            .from('.about-section', 1, {
+                opacity: 0,
+                x: 300
+            })
+            .from('.about-title h1', .1, {
+                opacity: 0
+
+            }, 'ww')
+            .from('.about-title h1', .1, {
+                opacity: 1
+
+            })
+            .from('.about-title h1', .1, {
+                opacity: 0
+
+            })
+            .from('.about-title h1', .1, {
+                opacity: 1
+
+            })
+            .from('.about-title h1', .1, {
+                opacity: 0
+
+            })
+            .from('.about-text p', .2, {
+                opacity: 0
+            })
     })
     work.addEventListener('click', () => {
         contentBox.innerHTML = '';
         contentBox.innerHTML = workContent;
+
+
+        openWork
+            .from('.work-content-card', 1, {
+                opacity: 0,
+                x: -300,
+
+            })
+            .from('.card-5', .2, {
+                opacity: 0
+            })
+            .from('.card-2', .2, {
+                opacity: 0
+            })
+            .from('.card-3', .2, {
+                opacity: 0
+            })
+            .from('.card-6', .2, {
+                opacity: 0
+            })
+            .from('.card-1', .2, {
+                opacity: 0
+            })
+            .from('.card-4', .2, {
+                opacity: 0
+            })
+
+
+
+
     })
     skills.addEventListener('click', () => {
         contentBox.innerHTML = '';
         contentBox.innerHTML = skillsContent;
+
+        openSkills
+            .from('.skills-content', .6, {
+                opacity: 0,
+                x: 300,
+
+            })
+            .from('.skills-title h1', .1, {
+                opacity: 0
+
+            }, 'ww')
+            .from('.skills-title h1', .1, {
+                opacity: 1
+
+            })
+            .from('.skills-title h1', .1, {
+                opacity: 0
+
+            })
+            .from('.skills-title h1', .1, {
+                opacity: 1
+
+            })
+            .from('.skills-title h1', .1, {
+                opacity: 0
+
+            })
+            .from('.skills-text', .2, {
+                opacity: 0
+            }, 'ww', 1)
+    })
+
+    phoneContact.addEventListener('click', () => {
+        phoneContact.classList.toggle('opened');
+        openContact.reversed() ? openContact.play() : openContact.reverse();
+
+        openContact
+            .to('.interface-settings li', .3, {
+                x: 550,
+                ease: Power4.easeOut
+            })
+
+    })
+
+    // MUSIC 
+
+
+    let musicBtn = document.querySelector('.sound-settings');
+    musicBtn.addEventListener('mousedown', () => {
+        let soundIcon = document.querySelector('.fa-volume-up');
+        let music = document.querySelector('.player');
+        if (musicBtn.classList.contains('muted')) {
+            music.play();
+            musicBtn.classList.remove('muted');
+            soundIcon.style.color = "var(--y-non-selected-text)";
+        } else {
+            music.pause();
+            musicBtn.classList.add('muted');
+            soundIcon.style.color = "red";
+
+        }
+
     })
 
 
-
-
-
-
 })
+
+
