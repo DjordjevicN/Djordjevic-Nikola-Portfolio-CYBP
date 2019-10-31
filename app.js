@@ -71,7 +71,7 @@ let workContent = `
                     Real Estate gold
                     </h1>
                     <a href="https://hopeful-einstein-2a0f32.netlify.com/" target="_blank">
-                    <img class="workPic" src="https://raw.githubusercontent.com/DjordjevicN/Real-Estate-gold/master/Screenshot_1.jpg"> </a>
+                    <img class="workPic" src="https://raw.githubusercontent.com/DjordjevicN/Real-Estate-gold/master/Screenshot_2.jpg"> </a>
                     <a href="https://github.com/DjordjevicN/Real-Estate-gold">  
                     <p class="button-project btn-github ">Go to GITHUB</p></a>
                 </div>
