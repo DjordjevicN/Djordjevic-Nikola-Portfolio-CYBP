@@ -516,6 +516,111 @@ img{
     }
 
  }
+
+@media screen and (max-width: 1015px){
+    .about-content{
+        overflow-y: scroll;   
+        height: 550px;
+      }
+      .phone-contact{
+          width: 100px;
+      }
+      .letsTalk {
+          width: 110px;
+         
+      }
+      .letsTalk h1{
+          font-size: 25px;
+      }
+      .work-gallery{
+        overflow-y: scroll;   
+        height: 500px;
+      }
+
+ }
+ @media screen and (max-width: 786px){
+    .about-content{
+        overflow-y: scroll;   
+        height: 300px;
+      }
+      .phone-contact{
+          width: 100px;
+      }
+      .letsTalk {
+          width: 110px;
+         
+      }
+      .letsTalk h1{
+          font-size: 25px;
+      }
+      .work-gallery{
+        overflow-y: scroll;   
+        height: 500px;
+      }
+
+ }
+ @media screen and (max-width: 660px){
+    .about-content{
+        overflow-y: scroll;   
+        height: 200px;
+      }
+      .phone-contact{
+          width: 100px;
+      }
+      .letsTalk {
+          width: 110px;
+         
+      }
+      .letsTalk h1{
+          font-size: 25px;
+      }
+      .work-gallery{
+        overflow-y: scroll;   
+        height: 500px;
+      }
+      .nav-bar li{
+          padding: 0 20px;
+      }
+
+ }
+ @media screen and (max-width: 400px){
+    .about-content{
+        overflow-y: scroll;   
+        height: 450px;
+        padding: 10px;
+      }
+      .phone-contact{
+          display: none;
+      }
+      .letsTalk {
+          display: none;
+         
+      }
+      .work-gallery{
+        overflow-y: scroll;   
+        height: 350px;
+        
+      }
+      .nav-bar li{
+          padding: 0;
+          font-size:12px;
+
+      }
+      .skills-text{
+          font-size: 13px;
+      }
+      .skills-content{
+          padding: 20px 0 20px 20px;
+      }
+      .greetings-title{
+          padding: 50px 10px 50px 10px;
+      }
+ }
+
+
+
+/* 
+
  @media 
   (max-width: 800px) 
   and (orientation: portrait) { 
@@ -539,9 +644,4 @@ img{
         height: 700px;
       }
       
-}
-
-
-
-
-
+} */
