@@ -67,50 +67,75 @@ let workContent = `
             <div class="work-gallery">
 
                 <div class="work-project-card card-6">
-                    <h1 class="work-project-card-title " data-depth=".1">
-                        Name Of The Project
+                    <h1 class="work-project-card-title ">
+                    Real Estate gold
                     </h1>
-                    <a href=""><img src="./moviesearch.jpg"> </a>
-                    <p class="button-project btn-github ">Go to GITHUB</p>
+                    <a href="https://hopeful-einstein-2a0f32.netlify.com/" target="_blank">
+                    <img class="workPic" src="https://raw.githubusercontent.com/DjordjevicN/Real-Estate-gold/master/Screenshot_1.jpg"> </a>
+                    <a href="https://github.com/DjordjevicN/Real-Estate-gold">  
+                    <p class="button-project btn-github ">Go to GITHUB</p></a>
                 </div>
 
                 <div class="work-project-card card-5">
-                    <h1 class="work-project-card-title " data-depth=".1">
-                        Name Of The Project
+                    <h1 class="work-project-card-title ">
+                        Digital Agency
                     </h1>
-                    <a href=""><img src="./moviesearch.jpg"> </a>
+                    <a href="https://djordjevicn.github.io/Digital-Agency/" target="_blank">
+                    <img class="workPic" src="https://raw.githubusercontent.com/DjordjevicN/Digital-Agency/master/Screenshot_2.jpg"> </a>
+                    <a href="https://github.com/DjordjevicN/Digital-Agency" target="_blank">  
                     <p class="button-project btn-github ">Go to GITHUB</p>
+                    </a>
                 </div>
+
                 <div class="work-project-card card-4">
-                    <h1 class="work-project-card-title " data-depth=".1">
-                        Name Of The Project
+                        <h1 class="work-project-card-title ">
+                        Mountain Parallax
                     </h1>
-                    <a href=""><img src="./moviesearch.jpg"> </a>
+                        <a href="https://djordjevicn.github.io/Parallax-practise-Mountin/" target="_blank">
+                    <img class="workPic" src="https://raw.githubusercontent.com/DjordjevicN/Parallax-practise-Mountin/master/Screenshot_1.jpg"> </a>
+                    <a href="https://github.com/DjordjevicN/Parallax-practise-Mountin" target="_blank">  
                     <p class="button-project btn-github ">Go to GITHUB</p>
+                    </a>
                 </div>
+
                 <div class="work-project-card card-3">
-                    <h1 class="work-project-card-title " data-depth=".1">
-                        Name Of The Project
+                    <h1 class="work-project-card-title ">
+                        Shoe Shop
                     </h1>
-                    <a href=""><img src="./moviesearch.jpg"> </a>
+                    <a href="https://djordjevicn.github.io/tezga-shop-shoes/" target="_blank">
+                    <img class="workPic" src="https://raw.githubusercontent.com/DjordjevicN/tezga-shop-shoes/master/Screenshot_3.jpg"> </a>
+                    <a href="https://github.com/DjordjevicN/tezga-shop-shoes" target="_blank">  
                     <p class="button-project btn-github ">Go to GITHUB</p>
+                    </a>
                 </div>
+
                 <div class="work-project-card card-2">
-                    <h1 class="work-project-card-title " data-depth=".1">
-                        Name Of The Project
+                    <h1 class="work-project-card-title ">
+                        Shoe Shop
                     </h1>
-                    <a href=""><img src="./moviesearch.jpg"> </a>
+                    <a href="https://djordjevicn.github.io/eCommerce-Burgelicious/" target="_blank">
+                    <img class="workPic" src="https://raw.githubusercontent.com/DjordjevicN/imagesRep/master/sc2.jpg"> </a>
+                    <a href="https://github.com/DjordjevicN/eCommerce-Burgelicious" target="_blank">  
                     <p class="button-project btn-github ">Go to GITHUB</p>
+                    </a>
                 </div>
-                <div class="work-project-card card-1">
-                    <h1 class="work-project-card-title " data-depth=".1">
-                        Name Of The Project
+
+                <div class="work-project-card card-2">
+                    <h1 class="work-project-card-title ">
+                        Shoe Shop
                     </h1>
-                    <a href=""><img src="./moviesearch.jpg"> </a>
+                    <a href="https://djordjevicn.github.io/Movie-Search-API-/" target="_blank">
+                    <img class="workPic" src="https://raw.githubusercontent.com/DjordjevicN/Movie-Search-API-/master/moviesearch.jpg"> </a>
+                    <a href="https://github.com/DjordjevicN/Movie-Search-API-" target="_blank">  
                     <p class="button-project btn-github ">Go to GITHUB</p>
+                    </a>
                 </div>
+
+                
             </div>
+            <p class="mobile">GO MOBILE</p>
         </div>
+      
     </section>
 `;
 
@@ -134,6 +159,82 @@ let skillsContent = `<div class="skills-section">
 </div>`;
 
 
+let mobileContent = `<section class="work-wrapper">
+<div class="work-content work-content-card">
+    <div class="work-gallery">
+
+        <div class="work-project-card card-6">
+            <h1 class="work-project-card-title ">
+            Real Estate gold
+            </h1>
+            <a href="https://hopeful-einstein-2a0f32.netlify.com/" target="_blank">
+            <img class="qr-card" src="./QRprojects/realestateQR.jpg"> </a>
+            <a href="https://github.com/DjordjevicN/Real-Estate-gold">  
+            <p class="button-project btn-github ">Go to GITHUB</p></a>
+        </div>
+
+        <div class="work-project-card card-5">
+            <h1 class="work-project-card-title ">
+                Digital Agency
+            </h1>
+            <a href="https://djordjevicn.github.io/Digital-Agency/" target="_blank">
+            <img class="qr-card" src="./QRprojects/digitalagensyQR.jpg"> </a>
+            <a href="https://github.com/DjordjevicN/Digital-Agency" target="_blank">  
+            <p class="button-project btn-github ">Go to GITHUB</p>
+            </a>
+        </div>
+
+        <div class="work-project-card card-4">
+                <h1 class="work-project-card-title ">
+                Mountain Parallax
+            </h1>
+                <a href="https://djordjevicn.github.io/Parallax-practise-Mountin/" target="_blank">
+            <img class="qr-card" src="./QRprojects/paralaxMountinQR.jpg"> </a>
+            <a href="https://github.com/DjordjevicN/Parallax-practise-Mountin" target="_blank">  
+            <p class="button-project btn-github ">Go to GITHUB</p>
+            </a>
+        </div>
+
+        <div class="work-project-card card-3">
+            <h1 class="work-project-card-title ">
+                Shoe Shop
+            </h1>
+            <a href="https://djordjevicn.github.io/tezga-shop-shoes/" target="_blank">
+            <img class="qr-card" src="./QRprojects/tezgaShopQR.jpg"> </a>
+            <a href="https://github.com/DjordjevicN/tezga-shop-shoes" target="_blank">  
+            <p class="button-project btn-github ">Go to GITHUB</p>
+            </a>
+        </div>
+
+        <div class="work-project-card card-2">
+            <h1 class="work-project-card-title ">
+                Burger Online
+            </h1>
+            <a href="https://djordjevicn.github.io/eCommerce-Burgelicious/" target="_blank">
+            <img class="qr-card" src="./QRprojects/burgelicious.jpg"> </a>
+            <a href="https://github.com/DjordjevicN/eCommerce-Burgelicious" target="_blank">  
+            <p class="button-project btn-github ">Go to GITHUB</p>
+            </a>
+        </div>
+
+        <div class="work-project-card card-1">
+            <h1 class="work-project-card-title ">
+                Movie Search
+            </h1>
+            <a href="https://djordjevicn.github.io/Movie-Search-API-/" target="_blank">
+            <img class="qr-card" src="./QRprojects/movieSearchQR.jpg"> </a>
+            <a href="https://github.com/DjordjevicN/Movie-Search-API-" target="_blank">  
+            <p class="button-project btn-github ">Go to GITHUB</p>
+            </a>
+        </div>
+
+        
+    </div>
+    <p class="mobile">GO MOBILE</p>
+</div>
+
+</section>`;
+
 
 
 
@@ -141,7 +242,6 @@ const home = document.querySelector('#home');
 const about = document.querySelector('#about');
 const work = document.querySelector('#work');
 const skills = document.querySelector('#skills');
-
 let contentBox = document.querySelector('.content-wrapper');
 let phoneContact = document.querySelector('.phone-contact');
 let enter = document.querySelector('.preloader-wrapper');
@@ -161,8 +261,15 @@ document.addEventListener('DOMContentLoaded', () => {
     contentBox.innerHTML = homeContent;
 
 
+    document.addEventListener('click', (e) => {
+        console.log(e.target);
+
+    })
+
+
+
     enterSequence
-        .from('.phone-contact', 1, {
+        .from('.letsTalk', 1, {
             x: -300
         })
         .from('#home', .1, {
@@ -308,10 +415,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 opacity: 0
             })
 
-
-
+        let goMobile = document.querySelector('.mobile');
+        goMobile.addEventListener('click', () => {
+            contentBox.innerHTML = '';
+            contentBox.innerHTML = mobileContent;
+            console.log('ss');
+        })
 
     })
+
+
+
     skills.addEventListener('click', () => {
         contentBox.innerHTML = '';
         contentBox.innerHTML = skillsContent;
@@ -360,25 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     // MUSIC 
-    let musicBtn = document.querySelector('.sound-settings');
-    let music = document.querySelector('.player');
-    music.play()
 
-    musicBtn.addEventListener('click', () => {
-        let soundIcon = document.querySelector('.fa-volume-up');
-        music = document.querySelector('.player');
-        if (musicBtn.classList.contains('muted')) {
-            music.play();
-            musicBtn.classList.remove('muted');
-            soundIcon.style.color = "var(--y-non-selected-text)";
-        } else {
-            music.pause();
-            musicBtn.classList.add('muted');
-            soundIcon.style.color = "red";
-
-        }
-
-    })
 
 
 })
