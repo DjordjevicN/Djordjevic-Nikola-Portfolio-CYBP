@@ -615,6 +615,17 @@ img{
       .greetings-title{
           padding: 50px 10px 50px 10px;
       }
+      .content-card{
+          top: 60px;
+      }
+      .about-content-card{
+        top: 10px;
+      }
+      .work-content-card{
+          top: 30px;
+      }
+          
+      
  }
 
 
