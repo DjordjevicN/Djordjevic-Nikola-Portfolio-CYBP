@@ -261,14 +261,8 @@ document.addEventListener('DOMContentLoaded', () => {
     contentBox.innerHTML = homeContent;
 
 
-    document.addEventListener('click', (e) => {
-        console.log(e.target);
-
-    })
-
-
-
     enterSequence
+
         .from('.letsTalk', 1, {
             x: -300
         })
@@ -323,6 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
             opacity: 0,
 
         })
+
 
 
 
