@@ -492,22 +492,42 @@ img{
 
 
 
-@media (min-height: 656px) and (min-width: 1300px) {
+@media (max-height: 656px) and (max-width: 1365px) {
     .content-card{
-        top:100px;
+        top: 90px;
+        height: 500px;
     }
     .greetings-title{
         font-size: 45px;
     }
     .about-content{
-        height: 500px;
+        height: 450px;
         overflow-Y: scroll;
+    }
+    .about-content-card{
+        margin-top: 90px;
+
     }
     .work-gallery{
         overflow-y: scroll;   
-        height: 500px;
+        height: 400px;
+       
+    }
+    .work-content-card{
+        margin-top: 90px;
+    }
+    .phone-contact{
+        width: 90px;
+    }
+    .letsTalk{
+        width: 90px;
+    }
+    
+    .letsTalk h1{
+        font-size: 20px;
     }
 }
+
 
 
  
@@ -532,6 +552,10 @@ img{
     }
 
  }
+
+
+
+
 
 
 @media screen and (max-width: 1015px){
