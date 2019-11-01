@@ -253,10 +253,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let openWork = new TimelineMax({})
     let openContact = new TimelineMax({ paused: true, reversed: true })
 
-    document.addEventListener('click', (e) => {
-        console.log(e.target);
-
-    })
     contentBox.innerHTML = '';
     contentBox.innerHTML = homeContent;
     enterSequence
