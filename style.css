@@ -548,13 +548,12 @@ img{
         padding: 60px 0 60px 100px;
     }
     
-   
 }
 
 
 
  
- @media screen and (max-width: 1281px){
+ @media screen and (max-width: 1200px){
     .content-card{
     top: 120px;
     }
@@ -573,6 +572,7 @@ img{
       overflow-y: scroll;   
       height: 500px;
     }
+    
 
  }
 
