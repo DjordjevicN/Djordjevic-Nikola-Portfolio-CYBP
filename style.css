@@ -413,9 +413,10 @@ img{
 }
 .sound-settings{
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    top: 20px;
+    left: 20px;
     cursor: pointer;
+    z-index: 10000;
 }
 .sound-settings i {
     font-size: 20px;

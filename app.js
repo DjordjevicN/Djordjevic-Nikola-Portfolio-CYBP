@@ -309,8 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
             opacity: 0,
 
         })
-
-        .to('.interface-settings li', 1, {
+        .to('.interface-settings li', .9, {
             y: 750
         })
 
@@ -449,7 +448,7 @@ document.addEventListener('DOMContentLoaded', () => {
         openContact.reversed() ? openContact.play() : openContact.reverse();
 
         openContact
-            .to('.interface-settings li', 1, {
+            .to('.interface-settings li', .3, {
                 y: 0
             })
     })
