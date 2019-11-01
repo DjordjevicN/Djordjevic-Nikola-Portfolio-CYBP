@@ -111,7 +111,7 @@ let workContent = `
 
                 <div class="work-project-card card-2">
                     <h1 class="work-project-card-title ">
-                        Shoe Shop
+                        Burger shop
                     </h1>
                     <a href="https://djordjevicn.github.io/eCommerce-Burgelicious/" target="_blank">
                     <img class="workPic" src="https://raw.githubusercontent.com/DjordjevicN/imagesRep/master/sc2.jpg"> </a>
@@ -122,7 +122,7 @@ let workContent = `
 
                 <div class="work-project-card card-2">
                     <h1 class="work-project-card-title ">
-                        Shoe Shop
+                        Movie API search
                     </h1>
                     <a href="https://djordjevicn.github.io/Movie-Search-API-/" target="_blank">
                     <img class="workPic" src="https://raw.githubusercontent.com/DjordjevicN/Movie-Search-API-/master/moviesearch.jpg"> </a>
@@ -247,11 +247,7 @@ let enter = document.querySelector('.preloader-wrapper');
 
 document.addEventListener('DOMContentLoaded', () => {
     let enterSequence = new TimelineMax({})
-    let openSkills = new TimelineMax({})
-    let openHome = new TimelineMax({})
-    let openAbout = new TimelineMax({})
-    let openWork = new TimelineMax({})
-    let openContact = new TimelineMax({ paused: true, reversed: true })
+
 
     contentBox.innerHTML = '';
     contentBox.innerHTML = homeContent;
@@ -314,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
     home.addEventListener('click', () => {
         contentBox.innerHTML = '';
         contentBox.innerHTML = homeContent;
-
+        let openHome = new TimelineMax({})
         openHome
             .from('.home', 1, {
                 opacity: 0,
@@ -336,7 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
     about.addEventListener('click', () => {
         contentBox.innerHTML = '';
         contentBox.innerHTML = aboutContent;
-
+        let openAbout = new TimelineMax({})
         openAbout
             .from('.about-section', 1, {
                 opacity: 0,
@@ -369,7 +365,7 @@ document.addEventListener('DOMContentLoaded', () => {
     work.addEventListener('click', () => {
         contentBox.innerHTML = '';
         contentBox.innerHTML = workContent;
-
+        let openWork = new TimelineMax({})
 
         openWork
             .from('.work-content-card', 1, {
@@ -377,24 +373,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 x: -300,
 
             })
-            .from('.card-5', .2, {
+            .from('.card-5', .1, {
                 opacity: 0
-            })
-            .from('.card-2', .2, {
+            }, 'op')
+            .from('.card-2', .1, {
                 opacity: 0
-            })
-            .from('.card-3', .2, {
+            }, 'op')
+            .from('.card-3', .1, {
                 opacity: 0
-            })
-            .from('.card-6', .2, {
+            }, 'op')
+            .from('.card-6', .1, {
                 opacity: 0
-            })
-            .from('.card-1', .2, {
+            }, 'oz')
+            .from('.card-1', .1, {
                 opacity: 0
-            })
-            .from('.card-4', .2, {
+            }, 'oz')
+            .from('.card-4', .1, {
                 opacity: 0
-            })
+            }, 'oz')
 
         let goMobile = document.querySelector('.mobile');
         goMobile.addEventListener('click', () => {
@@ -410,7 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
     skills.addEventListener('click', () => {
         contentBox.innerHTML = '';
         contentBox.innerHTML = skillsContent;
-
+        let openSkills = new TimelineMax({})
         openSkills
             .from('.skills-content', .6, {
                 opacity: 0,
@@ -441,8 +437,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 opacity: 0
             }, 'ww', 1)
     })
+    let openContact = new TimelineMax({ paused: true, reversed: true })
     phoneContact.addEventListener('click', () => {
         phoneContact.classList.toggle('opened');
+
         openContact.reversed() ? openContact.play() : openContact.reverse();
 
         openContact
