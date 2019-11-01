@@ -82,6 +82,7 @@ img{
     margin-top: 15px;
     font-size: 40px;
     color: var(--y-non-selected-text);  
+    
     cursor: pointer;   
 }
 .nav-bar li:hover{
@@ -508,7 +509,7 @@ img{
 
 
 /* (max-height: 656px) and */
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1390px) {
     .content-card{
         top: 90px;
         height: 500px;
@@ -546,7 +547,8 @@ img{
         top: 100px;
         padding: 60px 0 60px 100px;
     }
-
+    
+   
 }
 
 
