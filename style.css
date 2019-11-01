@@ -492,7 +492,22 @@ img{
 
 
 
-
+@media (min-height: 656px) and (min-width: 1300px) {
+    .content-card{
+        top:100px;
+    }
+    .greetings-title{
+        font-size: 45px;
+    }
+    .about-content{
+        height: 500px;
+        overflow-Y: scroll;
+    }
+    .work-gallery{
+        overflow-y: scroll;   
+        height: 500px;
+    }
+}
 
 
  
@@ -517,6 +532,7 @@ img{
     }
 
  }
+
 
 @media screen and (max-width: 1015px){
     .about-content{
