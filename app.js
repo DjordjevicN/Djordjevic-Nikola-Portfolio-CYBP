@@ -62,7 +62,7 @@ let aboutContent = `<section class="about-wrapper">
 </section>`;
 
 let workContent = `
-<section class="work-wrapper">
+
         <div class="work-content work-content-card">
             <div class="work-gallery">
 
@@ -136,7 +136,7 @@ let workContent = `
             <p class="mobile">GO MOBILE</p>
         </div>
       
-    </section>
+  
 `;
 
 let skillsContent = `<div class="skills-section">
@@ -252,14 +252,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let openAbout = new TimelineMax({})
     let openWork = new TimelineMax({})
     let openContact = new TimelineMax({ paused: true, reversed: true })
+
+    document.addEventListener('click', (e) => {
+        console.log(e.target);
+
+    })
     contentBox.innerHTML = '';
     contentBox.innerHTML = homeContent;
     enterSequence
         .from('.letsTalk', 1, {
             x: -300
-        })
-        .from('.interface-settings li', 1, {
-            y: 750
         })
         .from('#home', .1, {
             opacity: 0
@@ -309,8 +311,8 @@ document.addEventListener('DOMContentLoaded', () => {
             opacity: 0,
 
         })
-        .to('.interface-settings li', .9, {
-            y: 750
+        .from('.interface-settings li', .9, {
+            x: 550
         })
 
     home.addEventListener('click', () => {
@@ -449,7 +451,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         openContact
             .to('.interface-settings li', .3, {
-                y: 0
+                x: 550
             })
     })
 })

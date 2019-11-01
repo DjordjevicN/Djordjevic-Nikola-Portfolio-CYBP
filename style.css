@@ -61,7 +61,6 @@ img{
     position: absolute;
     top: 0;
     left: 0;
-    /* background-color: rgba(10, 12, 12, 0.281);  */
     z-index: -19;
 }
 /* NAVIGATION  */
@@ -71,6 +70,7 @@ img{
     width: 100%;
     display: flex;
     justify-content: center;
+    
 }
 .nav-bar li{
     
@@ -82,16 +82,19 @@ img{
     margin-top: 15px;
     font-size: 40px;
     color: var(--y-non-selected-text);  
-    
     cursor: pointer;   
+   
 }
+
 .nav-bar li:hover{
     color:var(--y-selected-text);
-    /* color: var(--bg-color); */
+   
 }
-/* //////////////////// */
+
+
 
 .content-card{
+    
     border-left: 3px solid  var(--y-selected-text);
     border-right: 3px solid var(--y-selected-text);
     width: 70%;
@@ -103,8 +106,6 @@ img{
     box-shadow: inset 200px 21px 194px 20px #12c0953b;
 }
 .content-card::before {
-    /* height: 3px;
-    width: 20px; */
     content: ' ';
     position: absolute;
     display: block;
@@ -114,8 +115,6 @@ img{
     left: 0px;
 }
 .content-card::after{
-    /* height: 3px;
-    width: 20px; */
     content: ' ';
     position: absolute;
     display: block;
@@ -155,7 +154,6 @@ img{
     border-right: 3px solid var(--y-selected-text);
     width: 70%;
     position: absolute;
-    /* margin: 0 auto; */
     left: 15%;
     margin-top: 120px;
     -webkit-box-shadow: inset 200px 21px 194px 20px #12a6c03b;
@@ -163,8 +161,6 @@ img{
     box-shadow: inset 200px 21px 194px 20px #12c0953b;
 }
 .about-content-card::before {
-    /* height: 3px;
-    width: 20px; */
     content: ' ';
     position: absolute;
     display: block;
@@ -174,8 +170,6 @@ img{
     left: 0px;
 }
 .about-content-card::after{
-    /* height: 3px;
-    width: 20px; */
     content: ' ';
     position: absolute;
     display: block;
@@ -206,31 +200,27 @@ img{
 }
 .about-text p{
     font-size: 20px;
-    letter-spacing: 1px;
-    
-    
+    letter-spacing: 1px;  
 }
 .about-text i{
     font-size: 30px;
 }
 /* WORK  */
+
 .work-content-card{
     border-left: 3px solid  var(--y-selected-text);
     border-right: 3px solid var(--y-selected-text);
     width: 70%;
     text-align: center;
     margin: 0 auto;
-    /* position: absolute;
-    left: 15%; */
     margin-top: 130px;
     -webkit-box-shadow: inset 200px 21px 194px 20px #12a6c03b;
     -moz-box-shadow: inset 200px 21px 194px 20px #c012b73b;
     box-shadow: inset 200px 21px 194px 20px #12c0953b;
     
 }
+
 .work-content-card::after{
-    /* height: 3px;
-    width: 20px; */
     content: ' ';
     position: absolute;
     display: block;
@@ -300,7 +290,6 @@ img{
     box-shadow: inset 200px 21px 194px 20px #12c0953b;
 }
 .skills-content-card::before {
- 
     content: ' ';
     position: absolute;
     display: block;
@@ -330,35 +319,34 @@ img{
     font-size: 25px;
 }
 /* CONTACT  */
-
-
-
 /* FOOTER  */
 .footer{
     width: 100%;
     position: absolute;
     bottom: 0; 
     z-index: -1;
-
 }
-
 /* CONTACT BAR */
-.phone-contact{
-    display: grid;
-    position: relative;;
-    width: 150px;
-    bottom: -10px;
-    cursor: pointer;
-    z-index: 1;
-}
 .letsTalk{
     text-align: center;
     position: relative;;
-    width: 150px;
+    width: 100px;
     bottom: -10px;
+    left: 0px;
+    cursor: pointer;
+    z-index: 1;
+   
+}
+.phone-contact{
+    display: grid;
+    position: relative;;
+    width: 100px;
+    bottom: 10px;
     cursor: pointer;
     z-index: 1;
 }
+
+
 .letsTalk-icon{
     font-size: 30px;
     color: var(--w-non-selected-text);
@@ -366,24 +354,29 @@ img{
 }
 @keyframes letsTalk1 {
     form{
-       transform: scale(1); 
-       padding: 20px;
+       color: var(--w-non-selected-text);
       
     }
     to{
-        transform: scale(.7);
-        padding: 3px;
-        
+        color: rgba(252, 0, 252, 0.295);
     }
 }
 .letsTalk h1{
     font-weight: 100;
-    font-size: 40px;
-    border:3px solid var(--w-non-selected-text);
+    font-size: 30px;
+    border-left:3px solid var(--w-non-selected-text);
+    border-right:3px solid var(--w-non-selected-text);
     background-image: linear-gradient(to right, rgba(0, 195, 255, 0.26) , rgba(204, 0, 255, 0.397));
+    animation: letsTalk2 .5s infinite alternate;
 }
-
-
+@keyframes letsTalk2 {
+    form{
+       color: var(--w-non-selected-text);
+    }
+    to{
+        color: rgba(252, 0, 252, 0.295);
+    }
+}
 .settings-green{
     color:var(--g-selected-text);
 }
@@ -399,11 +392,11 @@ img{
 }
 .interface-settings{
     position: fixed;
-    top: 15%;
-    left: 40px;
+    bottom: 15px;
+    left: -400px;
 }
 .interface-settings ul{
-    /* display: flex; */
+    display: flex;
 }
 .interface-settings li{
     padding: 20px;
@@ -425,90 +418,6 @@ img{
 }
 
 
-/* LOADER  */
-
-
-.preloader-wrapper{
-    background-color: #272b23;
-    width: 100%;
-    height: 100vh;
-}
-
-#preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-#loader {
-    display: block;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    width: 150px;
-    height: 150px;
-    margin: -75px 0 0 -75px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #9370DB;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
-}
-#loader:before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #BA55D3;
-    -webkit-animation: spin 3s linear infinite;
-    animation: spin 3s linear infinite;
-}
-#loader:after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #FF00FF;
-    -webkit-animation: spin 1.5s linear infinite;
-    animation: spin 1.5s linear infinite;
-}
-@-webkit-keyframes spin {
-    0%   {
-        -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-@keyframes spin {
-    0%   {
-        -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-} 
-
-
-
-/* (max-height: 656px) and */
 @media screen and (max-width: 1390px) {
     .content-card{
         top: 90px;
@@ -594,7 +503,7 @@ img{
          
       }
       .letsTalk h1{
-          font-size: 25px;
+          font-size: 15px;
       }
       .work-gallery{
         overflow-y: scroll;   
@@ -687,6 +596,11 @@ img{
       }
       .work-content-card{
           top: 30px;
+      }
+      .sound-settings{
+         top:unset;
+         bottom: 20px;
+        
       }
           
       
