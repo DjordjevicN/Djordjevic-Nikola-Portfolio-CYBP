@@ -492,7 +492,7 @@ img{
 
 
 
-@media (max-height: 656px) and (max-width: 1365px) {
+@media (min-height: 656px) and (min-width: 1365px) {
     .content-card{
         top: 90px;
         height: 500px;
