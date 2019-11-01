@@ -225,19 +225,8 @@ img{
     -webkit-box-shadow: inset 200px 21px 194px 20px #12a6c03b;
     -moz-box-shadow: inset 200px 21px 194px 20px #c012b73b;
     box-shadow: inset 200px 21px 194px 20px #12c0953b;
+    
 }
-
-/* .work-content-card::before {
-    height: 3px;
-    width: 20px;
-    content: ' ';
-    position: absolute;
-    display: block;
-    z-index:100;
-    background: var(--y-selected-text);
-    top: 0px;
-    left: 0px;
-} */
 .work-content-card::after{
     /* height: 3px;
     width: 20px; */
@@ -252,18 +241,13 @@ img{
 .work-gallery{
     padding:30px 0;
     display: grid;
-    /* text-align: center; */
     grid-template-columns: repeat(auto-fit, 300px);
     justify-content: space-evenly;
-  
-    
-
 }
 .work-project-card{
    display: grid;
   
 }
-
 .work-project-card-title{
     font-size: 30px;
     padding: 20px 0 10px 0;
@@ -303,6 +287,37 @@ img{
 }
 /* SKILLS  */
  
+.skills-content-card{
+    border-left: 3px solid  var(--y-selected-text);
+    border-right: 3px solid var(--y-selected-text);
+    width: 70%;
+    position: absolute;
+    left: 17%;
+    top: 150px;
+    -webkit-box-shadow: inset 200px 21px 194px 20px #12a6c03b;
+    -moz-box-shadow: inset 200px 21px 194px 20px #c012b73b;
+    box-shadow: inset 200px 21px 194px 20px #12c0953b;
+}
+.skills-content-card::before {
+ 
+    content: ' ';
+    position: absolute;
+    display: block;
+    z-index:100;
+    background: var(--y-selected-text);
+    top: 0px;
+    left: 0px;
+}
+.skills-content-card::after{
+
+    content: ' ';
+    position: absolute;
+    display: block;
+    z-index: 100;
+    background: var(--y-selected-text);
+    top: 0px;
+    right: 0px;
+}
 .skills-content{
     padding: 160px 0px 160px 50px  ;
     letter-spacing: 1px;
@@ -383,11 +398,11 @@ img{
 }
 .interface-settings{
     position: fixed;
-    bottom: 50px;
-    left: -350px;
+    top: 15%;
+    left: 40px;
 }
 .interface-settings ul{
-    display: flex;
+    /* display: flex; */
 }
 .interface-settings li{
     padding: 20px;
@@ -491,8 +506,8 @@ img{
 
 
 
-
-@media (min-height: 656px) and (min-width: 1365px) {
+/* (max-height: 656px) and */
+@media screen and (max-width: 1300px) {
     .content-card{
         top: 90px;
         height: 500px;
@@ -526,6 +541,11 @@ img{
     .letsTalk h1{
         font-size: 20px;
     }
+    .skills-content{
+        top: 100px;
+        padding: 60px 0 60px 100px;
+    }
+
 }
 
 
@@ -671,29 +691,3 @@ img{
 
 
 
-/* 
-
- @media 
-  (max-width: 800px) 
-  and (orientation: portrait) { 
-
-    .about-content{
-        overflow-y: scroll;   
-        height: 700px;
-      }
-      .phone-contact{
-          width: 100px;
-      }
-      .letsTalk {
-          width: 110px;
-         
-      }
-      .letsTalk h1{
-          font-size: 25px;
-      }
-      .work-gallery{
-        overflow-y: scroll;   
-        height: 700px;
-      }
-      
-} */

@@ -140,7 +140,7 @@ let workContent = `
 `;
 
 let skillsContent = `<div class="skills-section">
-<div class="skills-content content-card">
+<div class="skills-content skills-content-card">
     <div class="skills-title">
         <h1>Skills</h1>
     </div>
@@ -234,10 +234,6 @@ let mobileContent = `<section class="work-wrapper">
 </div>
 
 </section>`;
-
-
-
-
 const home = document.querySelector('#home');
 const about = document.querySelector('#about');
 const work = document.querySelector('#work');
@@ -256,15 +252,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let openAbout = new TimelineMax({})
     let openWork = new TimelineMax({})
     let openContact = new TimelineMax({ paused: true, reversed: true })
-
     contentBox.innerHTML = '';
     contentBox.innerHTML = homeContent;
-
-
     enterSequence
-
         .from('.letsTalk', 1, {
             x: -300
+        })
+        .from('.interface-settings li', 1, {
+            y: 750
         })
         .from('#home', .1, {
             opacity: 0
@@ -298,9 +293,6 @@ document.addEventListener('DOMContentLoaded', () => {
             x: -300,
             fontSize: 250
         })
-        .from('.interface-settings li', 1, {
-            x: 550
-        })
         .from('.home', 1, {
             opacity: 0,
             x: -300
@@ -318,11 +310,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         })
 
-
-
-
-
-
+        .to('.interface-settings li', 1, {
+            y: 750
+        })
 
     home.addEventListener('click', () => {
         contentBox.innerHTML = '';
@@ -346,7 +336,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             })
     })
-
     about.addEventListener('click', () => {
         contentBox.innerHTML = '';
         contentBox.innerHTML = aboutContent;
@@ -455,23 +444,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 opacity: 0
             }, 'ww', 1)
     })
-
     phoneContact.addEventListener('click', () => {
         phoneContact.classList.toggle('opened');
         openContact.reversed() ? openContact.play() : openContact.reverse();
 
         openContact
-            .to('.interface-settings li', .3, {
-                x: 550,
-                ease: Power4.easeOut
+            .to('.interface-settings li', 1, {
+                y: 0
             })
-
     })
-
-    // MUSIC 
-
-
-
 })
 
 
