@@ -24,37 +24,36 @@ let aboutContent = `<section class="about-wrapper">
         </div>
         <div class="about-text">
             <p> My name is Nikola Đorđević.<br>
-                In 2018 I decided to change my career. <br>
-                I wanted to learn about what I was really interested in and what I enjoyed doing in my free
-                time<br>
-                and so I began putting serious effort into creating web sites.<br>
-                That same year, 2018, I quit my job and devoted myself completely to studying and creating. <br>
-                <br>
-                I had 2 possible roads ahead of me: <br>
-                1 – which would lead me back to university<br>
-                2 – which would mean for me to study on my own<br>
-                I decided to study on my own.
-                <br> I began with <i class="fab fa-html5"></i> and <i class="fab fa-css3-alt"></i> .
+            In 2018 I decided to change my career. <br>
+            I wanted to learn about what I was really interested in and what I enjoyed doing in my free
+            time<br>
+            and so I began putting serious effort into creating websites.<br>
+            That same year, 2018, I quit my job and devoted myself completely to studying and creating. <br>
+            <br>
+            I had 2 possible roads ahead of me: <br>
+            1 – which would lead me back to university<br>
+            2 – which would mean for me to study on my own<br>
+            I decided to study on my own.
+            <br> I began with <i class="fab fa-html5"></i> and <i class="fab fa-css3-alt"></i> .
 
-                I created a few landing pages.
-                As I have already worked in PhotoShop, PrmierPro, AfterEffects
-                I
-                independently created mock-ups and turned them into code.
-                <br>When I felt ready to move on, I turned to <i class="fab fa-js"></i> .<br>
-                <br>Then I realized that I needed someone to help me find the right direction.
-                <br>ComTrade had a Front End Development course, with a strong focus on JS.
-                I enrolled in it.<br> In September 2019, I graduated with a grade 10.<br>
-                As I was studying, I also worked on JS algorithms on the <i class="fab fa-free-code-camp"></i>
-                and I
-                created pages and small
-                application which are not complete as they have been constructed with a specific idea and
-                testing of
-                new options. When I felt comfortable working with JS i went on to learn <i
-                    class="fab fa-react"></i>
-                and to create
-                applications with it.<br><br>
-                Where is the road leading me now?
-                I want to be a professional web developer and to progress my knowledge.
+            I created a few landing pages.
+            As I have already worked in PhotoShop, PrmierPro, AfterEffects
+            I
+            independently created mock-ups and turned them into code.
+            <br>When I felt ready to move on, I turned to <i class="fab fa-js"></i> .<br>
+            <br>Then I realized that I needed someone to help me find the right direction.
+            <br>ComTrade had a Front End Development course, with a strong focus on JS.
+            I enrolled in it.<br> In September 2019, I graduated with a grade 10.<br>
+            As I was studying, I also worked on JS algorithms on the <i class="fab fa-free-code-camp"></i>
+            and I
+            created pages and small
+            application which are not complete as they have been constructed with a specific idea and
+            testing of
+            new options. When I felt comfortable working with JS i went on to learn <i
+                class="fab fa-react"></i>
+            <br>
+            Where is the road leading me now?
+            I want to be a professional web developer and to progress my knowledge.
             </p>
         </div>
     </div>
@@ -67,18 +66,29 @@ let workContent = `
             <div class="work-gallery">
 
                 <div class="work-project-card card-6">
-                    <h1 class="work-project-card-title ">
-                    Real Estate gold
+                    <h1 class="work-project-card-title tooltip ">
+                    Real Estate gold  <span class="tooltiptext">
+                    Project idea: 
+                    <br>-Responsive 
+                    <br>-Filter the objects 
+                    
+                    </span>
                     </h1>
                     <a href="https://hopeful-einstein-2a0f32.netlify.com/" target="_blank">
-                    <img class="workPic" src="https://raw.githubusercontent.com/DjordjevicN/Real-Estate-gold/master/Screenshot_2.jpg"> </a>
+                    <img class="workPic tooltip" src="https://raw.githubusercontent.com/DjordjevicN/Real-Estate-gold/master/Screenshot_2.jpg"> </a>
                     <a href="https://github.com/DjordjevicN/Real-Estate-gold">  
-                    <p class="button-project btn-github ">Go to GITHUB</p></a>
+                    <p class="button-project btn-github ">Go to GITHUB </p></a>
                 </div>
 
                 <div class="work-project-card card-5">
-                    <h1 class="work-project-card-title ">
-                        Digital Agency
+                    <h1 class="work-project-card-title tooltip">
+                        Digital Agency <span class="tooltiptext">
+                        Project idea: 
+                        <br>-Scroll Magic - animate on scroll
+                        <br>-GSAP 
+                        <br>-Video Background
+                        
+                        </span>
                     </h1>
                     <a href="https://djordjevicn.github.io/Digital-Agency/" target="_blank">
                     <img class="workPic" src="https://raw.githubusercontent.com/DjordjevicN/Digital-Agency/master/Screenshot_2.jpg"> </a>
@@ -88,8 +98,14 @@ let workContent = `
                 </div>
 
                 <div class="work-project-card card-4">
-                        <h1 class="work-project-card-title ">
-                        Mountain Parallax
+                        <h1 class="work-project-card-title tooltip">
+                        Mountain Parallax <span class="tooltiptext">
+                        Project idea: 
+                        <br>-Responsive 
+                        <br>-Parallax 
+                        <br>-GSAP
+                        
+                        </span>
                     </h1>
                         <a href="https://djordjevicn.github.io/Parallax-practise-Mountin/" target="_blank">
                     <img class="workPic" src="https://raw.githubusercontent.com/DjordjevicN/Parallax-practise-Mountin/master/Screenshot_1.jpg"> </a>
@@ -99,8 +115,14 @@ let workContent = `
                 </div>
 
                 <div class="work-project-card card-3">
-                    <h1 class="work-project-card-title ">
-                        Shoe Shop
+                    <h1 class="work-project-card-title tooltip">
+                        Shoe Shop <span class="tooltiptext">
+                        Project idea: 
+                        <br>-Bootstrap 
+                        <br>-Responsive
+                        <br>-Shop layout 
+                        
+                        </span>
                     </h1>
                     <a href="https://djordjevicn.github.io/tezga-shop-shoes/" target="_blank">
                     <img class="workPic" src="https://raw.githubusercontent.com/DjordjevicN/tezga-shop-shoes/master/Screenshot_3.jpg"> </a>
@@ -110,8 +132,14 @@ let workContent = `
                 </div>
 
                 <div class="work-project-card card-2">
-                    <h1 class="work-project-card-title ">
-                        Burger shop
+                    <h1 class="work-project-card-title tooltip">
+                        Burger shop <span class="tooltiptext">
+                        School Project: 
+                        <br>-Burger Shop
+                        <br>-Shopping Cart
+                        <br>-Anime.js
+                        
+                        </span>
                     </h1>
                     <a href="https://djordjevicn.github.io/eCommerce-Burgelicious/" target="_blank">
                     <img class="workPic" src="https://raw.githubusercontent.com/DjordjevicN/imagesRep/master/sc2.jpg"> </a>
@@ -121,8 +149,13 @@ let workContent = `
                 </div>
 
                 <div class="work-project-card card-2">
-                    <h1 class="work-project-card-title ">
-                        Movie API search
+                    <h1 class="work-project-card-title tooltip">
+                        Movie API search <span class="tooltiptext">
+                        Project idea: 
+                        <br>-Get information from API 
+                         
+                        
+                        </span>
                     </h1>
                     <a href="https://djordjevicn.github.io/Movie-Search-API-/" target="_blank">
                     <img class="workPic" src="https://raw.githubusercontent.com/DjordjevicN/Movie-Search-API-/master/moviesearch.jpg"> </a>
@@ -147,12 +180,8 @@ let skillsContent = `<div class="skills-section">
     <div class="skills-text">
         <p>My main expertise is Front End Development</p>
         <p> using HTML, CSS and JavaScript.</p>
-        <p>For animations I use GSAP and Anime.js </p>
-        <p>I am interested in animations and interactive layouts.</p>
-
-        <p> I am also familiar with Bootstrap and SASS.<p>
-
-
+        <p>I also use:</p>
+        <p>GSAP, Anime.js, ScrollMagic, SASS, Bootstrap , GIT, Firebase, PhotoShop, AfterEffects, PremierPro </p>
 
     </div>
 </div>
@@ -391,6 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .from('.card-4', .1, {
                 opacity: 0
             }, 'oz')
+
 
         let goMobile = document.querySelector('.mobile');
         goMobile.addEventListener('click', () => {

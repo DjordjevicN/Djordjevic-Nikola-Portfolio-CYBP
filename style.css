@@ -245,6 +245,7 @@ img{
     letter-spacing: 1px;
     font-weight: 100;
     color: white;
+    cursor: pointer;
 }
 .qr-card{
    width: 150px;
@@ -608,3 +609,43 @@ img{
 
 
 
+ .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+   
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-image: linear-gradient(to top, rgba(0, 57, 104, 0.658) , var(--bg-color));
+    color: var(--w-selected-text);
+    text-align: center;
+    border-top: 2px solid var(--w-non-selected-text);
+    border-bottom: 2px solid var(--w-non-selected-text);
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 80px;
+    left: 100px;
+    margin-left: -60px;
+    font-size: 17px;
+    
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+} 
