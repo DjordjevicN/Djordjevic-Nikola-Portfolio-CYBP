@@ -268,7 +268,7 @@ const about = document.querySelector('#about');
 const work = document.querySelector('#work');
 const skills = document.querySelector('#skills');
 let contentBox = document.querySelector('.content-wrapper');
-let phoneContact = document.querySelector('.phone-contact');
+let phoneContact = document.querySelector('.letsTalk');
 let enter = document.querySelector('.preloader-wrapper');
 
 
@@ -289,7 +289,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .from('#home', .3, {
             y: 400,
-            x: 300,
             fontSize: 250
         })
         .from('#about', .1, {
@@ -297,7 +296,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .from('#about', .3, {
             y: 400,
-            x: 100,
             fontSize: 250
         })
         .from('#work', .1, {
@@ -305,7 +303,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .from('#work', .3, {
             y: 400,
-            x: -100,
             fontSize: 250
         })
         .from('#skills', .1, {
@@ -313,7 +310,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .from('#skills', .3, {
             y: 400,
-            x: -300,
             fontSize: 250
         })
         .from('.home', 1, {
@@ -426,7 +422,7 @@ document.addEventListener('DOMContentLoaded', () => {
         goMobile.addEventListener('click', () => {
             contentBox.innerHTML = '';
             contentBox.innerHTML = mobileContent;
-            console.log('ss');
+
         })
 
     })
