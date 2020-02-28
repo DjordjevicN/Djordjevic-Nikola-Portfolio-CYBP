@@ -1,62 +1,54 @@
-
-
-
-
 let homeContent = `<div class="content-wrapper">
 <section class="home ">
     <div class="greetings content-card">
         <div class="greetings-title">
             <h1 class="t1"> HI </h1>
             <h1 class="t2"> My Name is <span>Nikola</span> </h1>
-            <h1 class="t3"> I am a Front End Developer </h1>
+            <h1 class="t3"> I am a Web Developer </h1>
         </div>
 
     </div>
 
 </section>`;
 
-
 let aboutContent = `<section class="about-wrapper">
 <div class="about-section about-content-card">
-    <div class="about-content">
-        <div class="about-title">
-            <h1>About</h1>
-        </div>
-        <div class="about-text">
-            <p> My name is Nikola Đorđević.<br>
-            In 2018 I decided to change my career. <br>
-            I wanted to learn about what I was really interested in and what I enjoyed doing in my free
-            time<br>
-            and so I began putting serious effort into creating websites.<br>
-            That same year, 2018, I quit my job and devoted myself completely to studying and creating. <br>
-            <br>
-            I had 2 possible roads ahead of me: <br>
-            1 – which would lead me back to university<br>
-            2 – which would mean for me to study on my own<br>
-            I decided to study on my own.
-            <br> I began with <i class="fab fa-html5"></i> and <i class="fab fa-css3-alt"></i> .
-
-            I created a few landing pages.
-            As I have already worked in PhotoShop, PrmierPro, AfterEffects
-            I
-            independently created mock-ups and turned them into code.
-            <br>When I felt ready to move on, I turned to <i class="fab fa-js"></i> .<br>
-            <br>Then I realized that I needed someone to help me find the right direction.
-            <br>ComTrade had a Front End Development course, with a strong focus on JS.
-            I enrolled in it.<br> In September 2019, I graduated with a grade 10.<br>
-            As I was studying, I also worked on JS algorithms on the <i class="fab fa-free-code-camp"></i>
-            and I
-            created pages and small
-            application which are not complete as they have been constructed with a specific idea and
-            testing of
-            new options. When I felt comfortable working with JS i went on to learn <i
-                class="fab fa-react"></i>
-            <br>
-            Where is the road leading me now?
-            I want to be a professional web developer and to progress my knowledge.
-            </p>
-        </div>
+  <div class="about-content">
+    <div class="about-title">
+      <h1>About</h1>
     </div>
+    <div class="about-text">
+      <p>
+        My name is Nikola Đorđević.<br />
+        In 2018 I decided to change my career. <br />
+        I wanted to learn about what I was really interested in and what I
+        enjoyed doing in my free time<br />
+        and so I began putting serious effort into creating websites.<br />
+        That same year, 2018, I quit my job and devoted myself completely to
+        studying and creating. <br />
+        <br />
+       
+        I began with <i class="fab fa-html5"></i> and
+        <i class="fab fa-css3-alt"></i> . I created a few landing pages. As
+        I have already worked in PhotoShop, PrmierPro, AfterEffects I
+        independently created mock-ups and turned them into code. <br />When
+        I felt ready to move on, I turned to
+        <i class="fab fa-js"></i> .<br />
+        <br />Then I realized that I needed someone to help me find the
+        right direction. <br />ComTrade had a Front End Development course,
+        with a strong focus on JS. I enrolled in it.<br />
+        In September 2019, I graduated with a grade 10.<br />
+        As I was studying, I also worked on JS algorithms on the
+        <i class="fab fa-free-code-camp"></i> and I created pages and small
+        application which are not complete as they have been constructed
+        with a specific idea and testing of new options. When I felt
+        comfortable working with JS i went on to learn
+        <i class="fab fa-react"></i>
+        <br />
+        As i went deeper into programming i wanted to do more than just front-end so i started learning <i class="fab fa-node"></i>, Express.js, MongoDB 
+      </p>
+    </div>
+  </div>
 </div>
 </section>`;
 
@@ -178,15 +170,20 @@ let skillsContent = `<div class="skills-section">
         <h1>Skills</h1>
     </div>
     <div class="skills-text">
-        <p>My main expertise is Front End Development</p>
-        <p> using HTML, CSS and JavaScript.</p>
+        <p> My main expertise is Front End Development</p>
+        <p> using<br/>- HTML, CSS, JavaScript, React</p>
         <p>I also use:</p>
-        <p>GSAP, Anime.js, ScrollMagic, SASS, Bootstrap , GIT, Firebase, PhotoShop, AfterEffects, PremierPro </p>
+        <p>- Node.js , Express ,<br/>
+         - MongoDB, Firebase</p>
+        <p>- React-Admin</p>
+
+        <p>- GSAP, Anime.js, ScrollMagic, SASS, <br/>
+        - Bootstrap , GIT, Firebase,<br/>
+         - PhotoShop, AfterEffects, PremierPro </p>
 
     </div>
 </div>
 </div>`;
-
 
 let mobileContent = `<section class="work-wrapper">
 <div class="work-content work-content-card">
@@ -263,217 +260,233 @@ let mobileContent = `<section class="work-wrapper">
 </div>
 
 </section>`;
-const home = document.querySelector('#home');
-const about = document.querySelector('#about');
-const work = document.querySelector('#work');
-const skills = document.querySelector('#skills');
-let contentBox = document.querySelector('.content-wrapper');
-let phoneContact = document.querySelector('.letsTalk');
-let enter = document.querySelector('.preloader-wrapper');
+const home = document.querySelector("#home");
+const about = document.querySelector("#about");
+const work = document.querySelector("#work");
+const skills = document.querySelector("#skills");
+let contentBox = document.querySelector(".content-wrapper");
+let phoneContact = document.querySelector(".letsTalk");
+let enter = document.querySelector(".preloader-wrapper");
 
+document.addEventListener("DOMContentLoaded", () => {
+  let enterSequence = new TimelineMax({});
 
+  contentBox.innerHTML = "";
+  contentBox.innerHTML = homeContent;
+  enterSequence
+    .from(".letsTalk", 1, {
+      x: -300
+    })
+    .from("#home", 0.1, {
+      opacity: 0
+    })
+    .from("#home", 0.3, {
+      y: 400,
+      fontSize: 250
+    })
+    .from("#about", 0.1, {
+      opacity: 0
+    })
+    .from("#about", 0.3, {
+      y: 400,
+      fontSize: 250
+    })
+    .from("#work", 0.1, {
+      opacity: 0
+    })
+    .from("#work", 0.3, {
+      y: 400,
+      fontSize: 250
+    })
+    .from("#skills", 0.1, {
+      opacity: 0
+    })
+    .from("#skills", 0.3, {
+      y: 400,
+      fontSize: 250
+    })
+    .from(".home", 1, {
+      opacity: 0,
+      x: -300
+    })
+    .from(".t1", 0.1, {
+      opacity: 0
+    })
+    .from(".t2", 0.1, {
+      opacity: 0
+    })
+    .from(".t3", 0.1, {
+      opacity: 0
+    })
+    .from(".interface-settings li", 0.9, {
+      x: 550
+    });
 
-
-document.addEventListener('DOMContentLoaded', () => {
-    let enterSequence = new TimelineMax({})
-
-
-    contentBox.innerHTML = '';
+  home.addEventListener("click", () => {
+    contentBox.innerHTML = "";
     contentBox.innerHTML = homeContent;
-    enterSequence
-        .from('.letsTalk', 1, {
-            x: -300
-        })
-        .from('#home', .1, {
-            opacity: 0
-        })
-        .from('#home', .3, {
-            y: 400,
-            fontSize: 250
-        })
-        .from('#about', .1, {
-            opacity: 0
-        })
-        .from('#about', .3, {
-            y: 400,
-            fontSize: 250
-        })
-        .from('#work', .1, {
-            opacity: 0
-        })
-        .from('#work', .3, {
-            y: 400,
-            fontSize: 250
-        })
-        .from('#skills', .1, {
-            opacity: 0
-        })
-        .from('#skills', .3, {
-            y: 400,
-            fontSize: 250
-        })
-        .from('.home', 1, {
-            opacity: 0,
-            x: -300
-        })
-        .from('.t1', .1, {
-            opacity: 0,
+    let openHome = new TimelineMax({});
+    openHome
+      .from(".home", 1, {
+        opacity: 0,
+        x: -300
+      })
+      .from(".t1", 0.1, {
+        opacity: 0
+      })
+      .from(".t2", 0.1, {
+        opacity: 0
+      })
+      .from(".t3", 0.1, {
+        opacity: 0
+      });
+  });
+  about.addEventListener("click", () => {
+    contentBox.innerHTML = "";
+    contentBox.innerHTML = aboutContent;
+    let openAbout = new TimelineMax({});
+    openAbout
+      .from(".about-section", 1, {
+        opacity: 0,
+        x: 300
+      })
+      .from(
+        ".about-title h1",
+        0.1,
+        {
+          opacity: 0
+        },
+        "ww"
+      )
+      .from(".about-title h1", 0.1, {
+        opacity: 1
+      })
+      .from(".about-title h1", 0.1, {
+        opacity: 0
+      })
+      .from(".about-title h1", 0.1, {
+        opacity: 1
+      })
+      .from(".about-title h1", 0.1, {
+        opacity: 0
+      })
+      .from(".about-text p", 0.2, {
+        opacity: 0
+      });
+  });
+  work.addEventListener("click", () => {
+    contentBox.innerHTML = "";
+    contentBox.innerHTML = workContent;
+    let openWork = new TimelineMax({});
 
-        })
-        .from('.t2', .1, {
-            opacity: 0,
+    openWork
+      .from(".work-content-card", 1, {
+        opacity: 0,
+        x: -300
+      })
+      .from(
+        ".card-5",
+        0.1,
+        {
+          opacity: 0
+        },
+        "op"
+      )
+      .from(
+        ".card-2",
+        0.1,
+        {
+          opacity: 0
+        },
+        "op"
+      )
+      .from(
+        ".card-3",
+        0.1,
+        {
+          opacity: 0
+        },
+        "op"
+      )
+      .from(
+        ".card-6",
+        0.1,
+        {
+          opacity: 0
+        },
+        "oz"
+      )
+      .from(
+        ".card-1",
+        0.1,
+        {
+          opacity: 0
+        },
+        "oz"
+      )
+      .from(
+        ".card-4",
+        0.1,
+        {
+          opacity: 0
+        },
+        "oz"
+      );
 
-        })
-        .from('.t3', .1, {
-            opacity: 0,
+    let goMobile = document.querySelector(".mobile");
+    goMobile.addEventListener("click", () => {
+      contentBox.innerHTML = "";
+      contentBox.innerHTML = mobileContent;
+    });
+  });
 
-        })
-        .from('.interface-settings li', .9, {
-            x: 550
-        })
+  skills.addEventListener("click", () => {
+    contentBox.innerHTML = "";
+    contentBox.innerHTML = skillsContent;
+    let openSkills = new TimelineMax({});
+    openSkills
+      .from(".skills-content", 0.6, {
+        opacity: 0,
+        x: 300
+      })
+      .from(
+        ".skills-title h1",
+        0.1,
+        {
+          opacity: 0
+        },
+        "ww"
+      )
+      .from(".skills-title h1", 0.1, {
+        opacity: 1
+      })
+      .from(".skills-title h1", 0.1, {
+        opacity: 0
+      })
+      .from(".skills-title h1", 0.1, {
+        opacity: 1
+      })
+      .from(".skills-title h1", 0.1, {
+        opacity: 0
+      })
+      .from(
+        ".skills-text",
+        0.2,
+        {
+          opacity: 0
+        },
+        "ww",
+        1
+      );
+  });
+  let openContact = new TimelineMax({ paused: true, reversed: true });
+  phoneContact.addEventListener("click", () => {
+    phoneContact.classList.toggle("opened");
 
-    home.addEventListener('click', () => {
-        contentBox.innerHTML = '';
-        contentBox.innerHTML = homeContent;
-        let openHome = new TimelineMax({})
-        openHome
-            .from('.home', 1, {
-                opacity: 0,
-                x: -300
-            })
-            .from('.t1', .1, {
-                opacity: 0,
+    openContact.reversed() ? openContact.play() : openContact.reverse();
 
-            })
-            .from('.t2', .1, {
-                opacity: 0,
-
-            })
-            .from('.t3', .1, {
-                opacity: 0,
-
-            })
-    })
-    about.addEventListener('click', () => {
-        contentBox.innerHTML = '';
-        contentBox.innerHTML = aboutContent;
-        let openAbout = new TimelineMax({})
-        openAbout
-            .from('.about-section', 1, {
-                opacity: 0,
-                x: 300
-            })
-            .from('.about-title h1', .1, {
-                opacity: 0
-
-            }, 'ww')
-            .from('.about-title h1', .1, {
-                opacity: 1
-
-            })
-            .from('.about-title h1', .1, {
-                opacity: 0
-
-            })
-            .from('.about-title h1', .1, {
-                opacity: 1
-
-            })
-            .from('.about-title h1', .1, {
-                opacity: 0
-
-            })
-            .from('.about-text p', .2, {
-                opacity: 0
-            })
-    })
-    work.addEventListener('click', () => {
-        contentBox.innerHTML = '';
-        contentBox.innerHTML = workContent;
-        let openWork = new TimelineMax({})
-
-        openWork
-            .from('.work-content-card', 1, {
-                opacity: 0,
-                x: -300,
-
-            })
-            .from('.card-5', .1, {
-                opacity: 0
-            }, 'op')
-            .from('.card-2', .1, {
-                opacity: 0
-            }, 'op')
-            .from('.card-3', .1, {
-                opacity: 0
-            }, 'op')
-            .from('.card-6', .1, {
-                opacity: 0
-            }, 'oz')
-            .from('.card-1', .1, {
-                opacity: 0
-            }, 'oz')
-            .from('.card-4', .1, {
-                opacity: 0
-            }, 'oz')
-
-
-        let goMobile = document.querySelector('.mobile');
-        goMobile.addEventListener('click', () => {
-            contentBox.innerHTML = '';
-            contentBox.innerHTML = mobileContent;
-
-        })
-
-    })
-
-
-
-    skills.addEventListener('click', () => {
-        contentBox.innerHTML = '';
-        contentBox.innerHTML = skillsContent;
-        let openSkills = new TimelineMax({})
-        openSkills
-            .from('.skills-content', .6, {
-                opacity: 0,
-                x: 300,
-
-            })
-            .from('.skills-title h1', .1, {
-                opacity: 0
-
-            }, 'ww')
-            .from('.skills-title h1', .1, {
-                opacity: 1
-
-            })
-            .from('.skills-title h1', .1, {
-                opacity: 0
-
-            })
-            .from('.skills-title h1', .1, {
-                opacity: 1
-
-            })
-            .from('.skills-title h1', .1, {
-                opacity: 0
-
-            })
-            .from('.skills-text', .2, {
-                opacity: 0
-            }, 'ww', 1)
-    })
-    let openContact = new TimelineMax({ paused: true, reversed: true })
-    phoneContact.addEventListener('click', () => {
-        phoneContact.classList.toggle('opened');
-
-        openContact.reversed() ? openContact.play() : openContact.reverse();
-
-        openContact
-            .to('.interface-settings li', .3, {
-                x: 550
-            })
-    })
-})
-
-
+    openContact.to(".interface-settings li", 0.3, {
+      x: 550
+    });
+  });
+});
